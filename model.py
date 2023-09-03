@@ -100,7 +100,7 @@ if __name__ == '__main__':
 
     # train model
     early_stop_callback = EarlyStopping(monitor="val_acc")
-    trainer = pl.Trainer(logger=logger,min_epochs=20
+    trainer = pl.Trainer(logger=logger,min_epochs=5
                          , max_epochs=25, callbacks=[MyPrintingCallback(), early_stop_callback])
     # trainer.fit(model=model, train_dataloaders=train_loader, val_dataloaders=val_loader)
 
